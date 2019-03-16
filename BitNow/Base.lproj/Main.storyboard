@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HomeVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="BitNow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitcoin" translatesAutoresizingMaskIntoConstraints="NO" id="ydx-LR-BmF">
+                                <rect key="frame" x="127.66666666666669" y="64" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="cVf-qh-ziF"/>
+                                    <constraint firstAttribute="width" constant="120" id="pPU-AN-hIg"/>
+                                </constraints>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8yP-o6-yzG">
+                                <rect key="frame" x="0.0" y="562" width="375" height="216"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pickerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="lGL-rg-mWL">
+                                <rect key="frame" x="20" y="214" width="335" height="83.333333333333314"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9W-7H-5cU">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="68.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="50"/>
+                                        <color key="textColor" red="1" green="0.76765839041095896" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3TV-Wn-6ic">
+                                        <rect key="frame" x="0.0" y="83.333333333333314" width="335" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.76409995719178081" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8yP-o6-yzG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="D3G-uv-hrF"/>
+                            <constraint firstItem="8yP-o6-yzG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FPM-az-tDL"/>
+                            <constraint firstItem="lGL-rg-mWL" firstAttribute="top" secondItem="ydx-LR-BmF" secondAttribute="bottom" constant="30" id="JiN-jY-8Z2"/>
+                            <constraint firstItem="ydx-LR-BmF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y9v-28-eFK"/>
+                            <constraint firstItem="lGL-rg-mWL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bp0-wx-zCH"/>
+                            <constraint firstItem="ydx-LR-BmF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="cve-Xy-fB7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lGL-rg-mWL" secondAttribute="trailing" constant="20" id="ecM-Nv-V21"/>
+                            <constraint firstItem="8yP-o6-yzG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="pro-GW-390"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bitcoinPriceLabel" destination="3TV-Wn-6ic" id="Zy6-CO-WUN"/>
+                        <outlet property="currencyPicker" destination="8yP-o6-yzG" id="CeH-JZ-jsa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="22.906403940886701"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bitcoin" width="333.33334350585938" height="333.33334350585938"/>
+    </resources>
+</document>
