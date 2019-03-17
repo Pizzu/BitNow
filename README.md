@@ -1,7 +1,7 @@
 # BitNow
 A bitcoin price tracking iOS app.
 
-#App Images
+# App Images
 
 ![IMG_0254](https://user-images.githubusercontent.com/26909188/54487768-e757d500-4899-11e9-8d83-acb54c3d39f7.PNG)
 
